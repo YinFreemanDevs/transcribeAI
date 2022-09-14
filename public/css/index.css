@@ -140,7 +140,7 @@ a {
   text-transform:uppercase;
 }
 .parpadea {
-  
+  color: rgb(29, 118, 252);
   animation-name: parpadeo;
   animation-duration: 1s;
   animation-timing-function: linear;

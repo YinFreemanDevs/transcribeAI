@@ -67,9 +67,24 @@
                     <div>
 
                         <form action="/uploadFile" method="post" enctype="multipart/form-data" target="_blank">
-                            <input type="file" name="file">
+                            <input id="file" type="file" name="file">
                             <input id="btnUpload" type="submit" value="UPLOAD MP3 FILE">
                         </form>
+                
+                        <span class="parpadea text" id="labelSpan"></span>
+                        <script>
+                            const file = document.getElementById('file');
+                            const btnUpload = document.getElementById('btnUpload');
+                            const labelSpan = document.getElementById('labelSpan');
+                            
+                            btnUpload.onclick = alertUpload;
+                            
+                            function alertUpload (){
+                                file.style.display = "none";
+                                btnUpload.style.display = "none";
+                                labelSpan.innerHTML = "I'm uploading the file, please wait...";
+                            }
+                        </script>
                    
                     </div>
                   

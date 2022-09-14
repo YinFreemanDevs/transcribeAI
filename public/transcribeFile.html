@@ -68,9 +68,25 @@
                     <div>
 
                         <form action="/goTranscribe" method="post">
-                            <label>click to start the transcription</label>
+                            <label id="transcribeText">click to start the transcription</label>
                             <input id="transcribe" type="submit" value="TRANSCRIBE FILE">
                         </form>
+
+                        <script>
+                            let btnGoTranscribe = document.getElementById('transcribe');
+                            let transcribeText = document.getElementById('transcribeText');
+                            let transcribe = document.getElementById('transcribe');
+
+                            btnGoTranscribe.onclick = alertTranscribe;
+
+                            function alertTranscribe(){
+                                alert("I am transcribing, please wait...");
+                                transcribeText.innerHTML = "<label>I am transcribing, please wait...</label>";
+                                transcribe.style.display = "none"
+                            }
+
+
+                        </script>
                         
                     </div>
                   
